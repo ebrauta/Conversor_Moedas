@@ -1,2 +1,2 @@
-# Conversor
-Conversor de moedas
+# Conversor de moedas
+Converte moedas de vários países
