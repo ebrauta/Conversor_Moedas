@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Converter em moedas</title>
   </head>
   <body>
@@ -11,38 +11,13 @@
       <h1>Converter App</h1>
       <p>Entre com a quantidade de Reais (R$)</p>
       <input id="number" type="text" maxlength="8" />
-      <div class="divide">
-        <p>Quais as moedas que você quer?</p>
-        <hr />
-        <div class="checkboxgroup">
-          <label for="coins50" class="coins">0,50
-            <input type="checkbox" id="coins50" name="coins50" value="50" class="checks" />
-            <span class="checkmark"></span>
-          </label>
-          <label for="coins25" class="coins">0,25
-            <input type="checkbox" id="coins25" name="coins25" value="25" class="checks" />
-            <span class="checkmark"></span>
-          </label>
-          <label for="coins10" class="coins">0,10
-            <input type="checkbox" id="coins10" name="coins10" value="10" class="checks" />
-            <span class="checkmark"></span>
-          </label>
-          <label for="coins5" class="coins">0,05
-            <input type="checkbox" id="coins5" name="coins5" value="5" class="checks" />
-            <span class="checkmark"></span>
-          </label>
-          <label for="coins1" class="coins">0,01
-            <input type="checkbox" id="coins1" name="coins1" value="1" class="checks" />
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <button type="button" onclick="convert()" name="convert">
-          Separar
+          <button type="button" onclick="convert()" name="convert">
+          Converter
         </button>
         <button type="button" onclick="clean()" name="clean">Limpar</button>
       </div>
     </div>
   </body>
-  <script src="jquery-3.4.1.min.js"></script>
-  <script src="script.js"></script>
+  <script src="scripts/jquery-3.4.1.min.js"></script>
+  <script src="scripts/script.js"></script>
 </html>
