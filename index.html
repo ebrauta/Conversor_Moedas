@@ -4,17 +4,42 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Converter em moedas</title>
+    <title>Converter App</title>
   </head>
   <body>
     <div class="window">
       <h1>Converter App</h1>
-      <p>Entre com a quantidade de Reais (R$)</p>
+      <p>Entre com a quantia:</p>
       <input id="number" type="text" maxlength="8" />
-          <button type="button" onclick="convert()" name="convert">
-          Converter
-        </button>
-        <button type="button" onclick="clean()" name="clean">Limpar</button>
+      <div class="opcoes">
+        <label for="moeda1">Converter de: </label>
+        <select name="moeda1" id="moeda1">
+          <option value="0">Reais</option>
+          <option value="1">Dólares americanos</option>
+          <option value="2">Euros</option>
+          <option value="3">Libras esterlinas</option>
+          <option value="4">Ienes</option>
+          <option value="5">Yuans</option>
+          <option value="6">Rublos russos</option>
+        </select>
+        <label for="moeda2">Para: </label>
+        <select name="moeda2" id="moeda2">
+          <option value="0">Reais</option>
+          <option value="1">Dólares americanos</option>
+          <option value="2">Euros</option>
+          <option value="3">Libras esterlinas</option>
+          <option value="4">Ienes</option>
+          <option value="5">Yuans</option>
+          <option value="6">Rublos russos</option>
+        </select>
+      </div>
+        <div class="botoes">
+            <button type="button" onclick="convert()" name="convert">
+                Converter
+            </button>
+            <button type="button" onclick="clean()" name="clean">Limpar</button>
+        </div>
+      <p id="obs"></p>    
       </div>
     </div>
   </body>
