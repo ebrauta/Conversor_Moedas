@@ -13,25 +13,9 @@
       <input id="number" type="text" maxlength="8" />
       <div class="opcoes">
         <label for="moeda1">Converter de: </label>
-        <select name="moeda1" id="moeda1">
-          <option value="0">Reais</option>
-          <option value="1">Dólares americanos</option>
-          <option value="2">Euros</option>
-          <option value="3">Libras esterlinas</option>
-          <option value="4">Ienes</option>
-          <option value="5">Yuans</option>
-          <option value="6">Rublos russos</option>
-        </select>
+        <select name="moeda1" id="moeda1"></select>
         <label for="moeda2">Para: </label>
-        <select name="moeda2" id="moeda2">
-          <option value="0">Reais</option>
-          <option value="1">Dólares americanos</option>
-          <option value="2">Euros</option>
-          <option value="3">Libras esterlinas</option>
-          <option value="4">Ienes</option>
-          <option value="5">Yuans</option>
-          <option value="6">Rublos russos</option>
-        </select>
+        <select name="moeda2" id="moeda2"></select>
       </div>
         <div class="botoes">
             <button type="button" onclick="convert()" name="convert">
@@ -39,10 +23,11 @@
             </button>
             <button type="button" onclick="clean()" name="clean">Limpar</button>
         </div>
+      <p id ='total' class="total"></p>
       <p id="obs"></p>    
       </div>
     </div>
   </body>
-  <script src="scripts/jquery-3.4.1.min.js"></script>
+  <script src="scripts/moedas.js"></script>
   <script src="scripts/script.js"></script>
 </html>
