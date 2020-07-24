@@ -4,30 +4,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Converter App</title>
+    <link href='../fonts/Montserrat-Regular.ttf' />
+    <link href='../fonts/BebasNeue-Regular.ttf' />
+    <script defer src="scripts/moedas.js"></script>
+    <script defer src="scripts/script.js"></script>
+    <title>Converter moedas</title>
   </head>
   <body>
     <div class="window">
-      <h1>Converter App</h1>
-      <p>Entre com a quantia:</p>
-      <input id="number" type="text" maxlength="8" />
-      <div class="opcoes">
-        <label for="moeda1">Converter de: </label>
-        <select name="moeda1" id="moeda1"></select>
-        <label for="moeda2">Para: </label>
-        <select name="moeda2" id="moeda2"></select>
-      </div>
-        <div class="botoes">
-            <button type="button" onclick="convert()" name="convert">
-                Converter
-            </button>
-            <button type="button" onclick="clean()" name="clean">Limpar</button>
+      <h1>Converter Moedas</h1>
+      <form>
+        <input id="number" type="text" maxlength="8" placeholder="Insira a quantia a ser convertida"/>
+        <p id="obs" class="obs"></p> 
+        <div class="opcoes">
+          <fieldset class="labelcomplete">
+            <label for="moeda1">Converter de: </label>
+            <select name="moeda1" id="moeda1" class="moeda"></select>
+          </fieldset>
+          <fieldset  class="labelcomplete">
+            <label for="moeda2">Para: </label> 
+            <select name="moeda2" id="moeda2" class="moeda"></select>      
+          </fieldset>
         </div>
-      <p id ='total' class="total"></p>
-      <p id="obs"></p>    
-      </div>
+          <div class="botoes">
+              <input type="button" onclick="convert()" name="converte" id="converte" value='Converter'/>
+              <input type="button" onclick="clean()" name="limpa" id='limpa' value='Limpar'/>
+          </div>
+        <p id ='total' class="total"></p>   
+        </div>
+      </form>
     </div>
   </body>
-  <script src="scripts/moedas.js"></script>
-  <script src="scripts/script.js"></script>
 </html>

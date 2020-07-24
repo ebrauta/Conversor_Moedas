@@ -1,53 +1,69 @@
+
+body{
+  max-width: 1366px;
+  background-image: url('../images/background_1920x1152.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: 'Montserrat', sans-serif;
+}
 .window {
   margin: 0 auto;
   width: 500px;
-  font-family: 'Arial Black', cursive;
 }
 h1 {
   text-align: center;
-  color: #79589F;
+  color: #DD9C36;
 }
 
-p {
-  text-align: center;
-  color: #BA49FF;
+form{
+  padding: 15px 25px;
 }
-hr{
-  color: #BA49FF;
-}
+
 #number {
-  width: 99%;
-  height: 35px;
+  width: 95%;
+  height: 50px;
   display: block;
   margin: auto;
-  font-size: 24px;
-  border: 3px solid #BA49FF;
-  background: #A087BD;
-  color: white;
-  border-radius: 5%;
-  text-align: center;
+  font-size: 1em;
+  border: none;
+  background: white;
+  color: #121212;
+  border-radius: 5px;
+  text-align: justify;
+  padding: 0 15px;
+  background-color: white;
 }
 .opcoes{
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
   align-items: baseline;
+  padding: 40px 0 0 0;
+  width: 100%;
 }
-.opcoes label{
+
+.labelcomplete{
   line-height: 35px;
-  color: #BA49FF;
+  color: #323232;
+  background-color: #8f8f84;
+  font-family: 'Bebas Neue', cursive;
+  width: 45%;
+  border-radius: 5px;
 }
-.opcoes select{
-  width: 35%;
+
+.moeda{
+  width: 100%;
   display: block;
   margin: auto;
-  font-size: 24px;
-  border: 3px solid #BA49FF;
-  background: #A087BD;
+  font-size: 1em;
+  border: none;
+  background: #323232;
   color: white;
   border-radius: 5%;
   text-align: center;
+  padding: 5px 5px 5px 10px;
 }
+
 .botoes{
   display: flex;
   flex-direction: row;
@@ -55,38 +71,46 @@ hr{
   align-items: center;
 }
 
-button {
+input[type='button'] {
   margin-top: 10px;
   font-family: 'Arial Black', cursive;
   font-size: 16px;
   width: 40%;
   height: 50px;
   padding: 5px;
-  color: #A087BD;
-  background-color: white;
-  border: 2px solid #A087BD;
   border-radius: 5px;
 }
 
-button:hover {
-  cursor: pointer;
-  color: white;
-  background-color: #79589F;
-  transition: 0.1s;
+#converte{
+  background-image: url('../images/convert_money.png');
+  background-color: white;
+  background-position: 20px 12px;
+  background-repeat: no-repeat;
 }
+
+#limpa{
+  background-image: url('../images/cleaning-form.png');
+  background-color: white;
+  background-position: 20px 12px;
+  background-repeat: no-repeat;
+}
+
 
 .total {
   margin-top: 10px;
-  background-color: #A087BD;
+  background-color: #8f8f84;
   color: white;
   padding: 20px;
   text-align: center;
+  display: none;
 }
-.total p{
-    color: white;
-}
-#obs{
+
+
+.obs{
 font-size: 0.6em;
 font-style: italic;
 text-align: left;
+background-color: yellow;
+color: red;
+display: none;
 }

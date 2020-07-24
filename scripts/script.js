@@ -1,8 +1,8 @@
-var valor = document.getElementById("number");
-var moeda1 = document.getElementById("moeda1");
-var moeda2 = document.getElementById("moeda2");
-var obs = document.getElementById("obs");
-var total = document.getElementById("total");
+var valor = document.querySelector('#number');
+var moeda1 = document.querySelector('#moeda1');
+var moeda2 = document.querySelector('#moeda2');
+var obs = document.querySelector('#obs');
+var total = document.querySelector('#total');
 
 function criarSelect(select) {
   let opcoes = moedas.map((item) => item.name);
@@ -33,10 +33,12 @@ function testaNumero(numero) {
     let textincorrect = "Este valor está incorreto: Caracter inválido!";
     let erro = "Por favor, insira um número!!!";
     obs.innerHTML = `${textincorrect} <br> ${erro}`;
+    obs.style.display = 'block';
   } else if (numero < 0) {
     let textincorrect = "Este valor está incorreto! Número negativo!";
     let erro = "Por favor, insira um número positivo!!!";
     obs.innerHTML = `${textincorrect} <br> ${erro}`;
+    obs.style.display = 'block';
   } else {
     let option1 = moeda1.options.selectedIndex;
     let opc1 = [moedas[option1].name,moedas[option1].country]
@@ -54,6 +56,7 @@ function testaNumero(numero) {
     )}`;
     total.innerHTML = saida;
     total.style.display = "block";
+    obs.style.display = 'none';
   }
 }
 
