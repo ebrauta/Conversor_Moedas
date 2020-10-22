@@ -1,24 +1,42 @@
-
+/**
+ * Conversor
+ *
+ * Folha de Estilos para Conversor
+ *
+ * author Eduardo Rauta
+ * version 1.0
+ *
+ */ 
+/* Inicialização */
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+ /* Inicialização do body com largura máxima, imagem e font-family*/
 body{
   max-width: 1366px;
   background-image: url('../images/background_1920x1152.jpg');
-  background-size: 100%;
+  background-size: 100% ;
   background-repeat: no-repeat;
   font-family: 'Montserrat', sans-serif;
 }
+/* Div window que englobará titulo, caixas de texto e botões*/
 .window {
   margin: 0 auto;
   width: 500px;
 }
-h1 {
+/* Título principal*/
+.window h1 {
   text-align: center;
   color: #DD9C36;
+  font-size: 2rem;
 }
-
+/* Formulário com 1 inputbox, 2 selects e 2 buttons*/
 form{
   padding: 15px 25px;
 }
-
+/* Caixa de para inserção de valor */
 #number {
   width: 95%;
   height: 50px;
@@ -33,6 +51,7 @@ form{
   padding: 0 15px;
   background-color: white;
 }
+/* Div que contém 2 fieldsets com título e select */
 .opcoes{
   display: flex;
   justify-content: space-between;
@@ -41,7 +60,7 @@ form{
   padding: 40px 0 0 0;
   width: 100%;
 }
-
+/* Fieldsets que contem título e select */
 .labelcomplete{
   line-height: 35px;
   color: #323232;
@@ -50,11 +69,11 @@ form{
   width: 45%;
   border-radius: 5px;
 }
-
+/* Selects que serão escolhidas as moedas */
 .moeda{
   width: 100%;
   display: block;
-  margin: auto;
+  margin: 0 auto;
   font-size: 1em;
   border: none;
   background: #323232;
@@ -63,14 +82,14 @@ form{
   text-align: center;
   padding: 5px 5px 5px 10px;
 }
-
+/* Div que contem 2 buttons */
 .botoes{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
-
+/* Buttons generalizados Converter e Limpar */
 input[type='button'] {
   margin-top: 10px;
   font-family: 'Arial Black', cursive;
@@ -80,22 +99,21 @@ input[type='button'] {
   padding: 5px;
   border-radius: 5px;
 }
-
+/* Botão Converter */
 #converte{
   background-image: url('../images/convert_money.png');
   background-color: white;
   background-position: 20px 12px;
   background-repeat: no-repeat;
 }
-
+/* Botão Limpar */
 #limpa{
   background-image: url('../images/cleaning-form.png');
   background-color: white;
   background-position: 20px 12px;
   background-repeat: no-repeat;
 }
-
-
+/* Div que mostrará o texto final das conversões */
 .total {
   margin-top: 10px;
   background-color: #8f8f84;
@@ -103,9 +121,10 @@ input[type='button'] {
   padding: 20px;
   text-align: center;
   display: none;
+  border-radius: 5px;
+  line-height: 30px;
 }
-
-
+/* Paragráfo que mostrará erros de inserção de valor no inputbox number */
 .obs{
 font-size: 0.6em;
 font-style: italic;
@@ -113,4 +132,133 @@ text-align: left;
 background-color: yellow;
 color: red;
 display: none;
+}
+/* Medias Queries - Responsividade */
+/* 375px  - Smartphones */
+@media (max-width: 375px){
+  body{
+    background: rgb(80, 80, 80);
+    background-size: cover;
+  }
+  .window{
+    width: 75%;
+    margin: 0 auto;
+  }
+  .window h1{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  form{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+  #number{
+    margin: auto;
+  }
+  .obs{
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .opcoes{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .labelcomplete label{
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .moeda{
+    width: 200px;
+  }
+  .botoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .botoes input[type='button']{
+    color: rgba(255,255,255,0);
+    background-position: center;
+  }
+  .total{
+    position: absolute;
+    top: 35px;
+    left: 35px;
+  }
+}
+/* 768px  - Tablets */
+@media (max-width: 768px){
+  body{
+    background: rgb(197, 68, 68);
+    background-size: cover;
+  }
+  .window{
+    width: 30%;
+    margin: 0 auto;
+  }
+  .window h1{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  form{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+  #number{
+    margin: auto;
+  }
+  .obs{
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .opcoes{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .labelcomplete label{
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .moeda{
+    width: 200px;
+  }
+  .botoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .botoes input[type='button']{
+    color: rgba(255,255,255,0);
+    background-position: center;
+  }
+  .total{
+    position: absolute;
+    top: 35px;
+    left: 35px;
+  }
 }
